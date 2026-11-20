@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=kiMo Companion
+Comment=Start the kiMo phone keyboard and mouse companion
+Exec=/usr/bin/kimo autostart
+Icon=input-keyboard
+Terminal=false
+NoDisplay=true
+X-GNOME-Autostart-enabled=true

@@ -1,0 +1,8 @@
+*.apk
+*.aab
+node_modules/
+dist/
+.cache/
+build/
+*.log
+.DS_Store

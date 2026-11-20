@@ -1,0 +1,21 @@
+#!/bin/sh
+set -e
+
+LIB_DIR="${KIMO_LIB_DIR:-/usr/lib/kimo}"
+CLI="$LIB_DIR/kimo-cli.cjs"
+
+if [ ! -f "$CLI" ]; then
+  echo "kiMo CLI not found at $CLI" >&2
+  exit 1
+fi
+
+if [ -x "$LIB_DIR/runtime/node" ]; then
+  exec "$LIB_DIR/runtime/node" "$CLI" "$@"
+fi
+
+if command -v node >/dev/null 2>&1; then
+  exec node "$CLI" "$@"
+fi
+
+echo "kiMo runtime is missing. Reinstall the kimo package." >&2
+exit 1

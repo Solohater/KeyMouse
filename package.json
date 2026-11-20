@@ -1,0 +1,36 @@
+{
+  "name": "pocketinput",
+  "version": "1.0.0",
+  "description": "kiMo - Phone keyboard and mouse for Ubuntu Linux",
+  "workspaces": [
+    "shared",
+    "desktop",
+    "mobile"
+  ],
+  "scripts": {
+    "desktop": "npm --prefix desktop run start",
+    "mobile": "npm --prefix mobile run start",
+    "test": "npm --prefix desktop test",
+    "test:server": "npx --prefix desktop tsx desktop/test/server.test.ts",
+    "build:desktop": "node scripts/build-desktop.mjs",
+    "package:ubuntu": "node scripts/package-ubuntu.mjs",
+    "build:android": "node scripts/build-android.mjs",
+    "typecheck": "npm --prefix desktop run typecheck"
+  },
+  "keywords": [
+    "remote-input",
+    "keyboard",
+    "mouse",
+    "touchpad",
+    "wayland",
+    "uinput",
+    "ydotool",
+    "react-native",
+    "expo"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "esbuild": "^0.25.12"
+  }
+}

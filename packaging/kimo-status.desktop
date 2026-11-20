@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=kiMo Companion Status
+Comment=Show the pairing PIN and connection details
+Exec=/usr/bin/kimo status
+Icon=input-keyboard
+Terminal=true
+Categories=Utility;
+Keywords=kimo;pocketinput;remote;keyboard;mouse;
